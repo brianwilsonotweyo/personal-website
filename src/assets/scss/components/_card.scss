@@ -1,0 +1,11 @@
+.card {
+    background: #fff;
+    border-radius: 5px;
+    margin: 0;
+    transition: all .2s ease;
+    padding: 1rem 2rem;
+
+    &-shadow {
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.12);
+    }
+}
