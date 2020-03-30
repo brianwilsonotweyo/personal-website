@@ -16,24 +16,33 @@ const Header = () => {
     `)
 
     return ( 
-        <header className={styles.header}>
-            <h1>
-                <Link className={styles.title}  to="/">{data.site.siteMetadata.title}</Link>
-            </h1>
-            <nav className={styles.navList}>
-                <li>
-                    <Link className={styles.navItem} activeClassName={styles.activeNavItem} to="/">Home</Link>
-                </li>
-                <li>
-                    <Link className={styles.navItem} activeClassName={styles.activeNavItem} to="/blog">Blog</Link>
-                </li>
-                <li>
-                    <Link className={styles.navItem} activeClassName={styles.activeNavItem} to="/about">About Me</Link>
-                </li>
-                <li>
-                    <Link className={styles.navItem} activeClassName={styles.activeNavItem} to="/contact">Contact Me</Link>
-                </li>
-            </nav>
+        <header className={styles.navbar}>
+            <div className={styles.nav__container}>
+                <div className={styles.nav__branding}>
+                    <Link className={styles.title}  to="/">
+                        <img className={styles.logo} src="http://placehold.it/200x50" alt={data.site.siteMetadata.title}/>
+                    </Link>
+                </div>
+                <div className={styles.nav__body}>
+                    <nav className={styles.nav__menu}>
+                        <li>
+                            <Link className={styles.nav__item} activeClassName={styles.active} to="/">Inicio</Link>
+                        </li>
+                        <li>
+                            <Link className={styles.nav__item} activeClassName={styles.active} to="/about">Acerca de mi</Link>
+                        </li>
+                        <li>
+                            <Link className={styles.nav__item} activeClassName={styles.active} to="/work">Mis trabajos</Link>
+                        </li>
+                        <li>
+                            <Link className={styles.nav__item} activeClassName={styles.active} to="/blog">Blog</Link>
+                        </li>
+                        <li>
+                            <Link className={styles.nav__item} activeClassName={styles.active} to="/contact">Contactame</Link>
+                        </li>
+                    </nav>
+                </div>
+            </div>
         </header>
      );
 }

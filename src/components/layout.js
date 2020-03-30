@@ -9,13 +9,15 @@ import styles from './layout.module.scss';
 
 const Layout = (props) => {
     return ( 
-        <div className={styles.container}>
-            <div className={styles.content}>
-                <Header/>
-                {props.children}
+        <>
+            <Header/>
+            <div className="container container-layout">
+                <div className={styles.content}>
+                    {props.children}
+                </div>
+                <Footer/>
             </div>
-            <Footer/>
-        </div>
+        </>
      );
 }
  
