@@ -22,6 +22,11 @@ const Features = () => {
                                             <h4>DISEÑO MODERNO</h4>
                                             <p>Obtendrás un trabajo de altura, calidad y además con las últimas tecnologías de desarrollo web.</p>
                                         </div>
+
+                                        <div className={styles.f__boxItem}>
+                                            <h4>RÁPIDO Y ÓPTIMO</h4>
+                                            <p>La mejor experiencia de usuario está garantizada, tus clientes navegarán con la mejor rapidéz.</p>
+                                        </div>
                                     </div>
 
                                     <div>
