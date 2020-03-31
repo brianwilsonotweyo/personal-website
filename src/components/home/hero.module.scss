@@ -46,6 +46,20 @@
             font-size: 2.8rem;
             letter-spacing: -1px;
             margin: 0 0 25px;
+
+            &:after {
+                content: "|";
+                -webkit-animation: blink 1s infinite step-start;
+                        animation: blink 1s infinite step-start;
+              }
+              
+              @-webkit-keyframes blink {
+                50% { opacity: 0; }
+              }
+              
+              @keyframes blink {
+                50% { opacity: 0; }
+              }
         }
 
         .subtitle {
