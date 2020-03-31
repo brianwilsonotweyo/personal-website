@@ -20,7 +20,7 @@ const Header = () => {
             <div className={styles.nav__container}>
                 <div className={styles.nav__branding}>
                     <Link className={styles.title}  to="/">
-                        <img className={styles.logo} src="http://placehold.it/200x50" alt={data.site.siteMetadata.title}/>
+                        <img className={styles.logo} src="/img/logo-color.png" alt={data.site.siteMetadata.title}/>
                     </Link>
                 </div>
                 <div className={styles.nav__body}>

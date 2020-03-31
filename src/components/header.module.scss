@@ -23,8 +23,8 @@
     > a {
       display: block;
       .logo {
-        max-width: 100%;
-        height: auto;
+        width: auto;
+        max-height: 50px;
         margin: 0 auto;
         display: block;
       }

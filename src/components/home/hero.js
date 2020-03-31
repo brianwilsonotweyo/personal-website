@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <div className={styles.hero__wrapper}>
             <div className={styles.hero__content}>
-                <img src="http://placehold.it/200x50" className={styles.logo} alt=""/>
+                <img src="/img/logo-color.png" className={styles.logo} alt=""/>
 
                 <h4 className={styles.subtitle}>¡Hola! soy Alejandro y trabajo con</h4>
                 <h1 className={styles.title}>Desarrollo Frontend</h1>

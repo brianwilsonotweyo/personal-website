@@ -59,10 +59,28 @@ a {
       }
     }
 
+    &-title {
+      font-weight: 700;
+      position: relative;
+
+      &:after {
+        color: inherit;
+        opacity: .08;
+        font-size: 110%;
+        position: absolute;
+        bottom: -1rem;
+        left: -1.5rem;
+        filter: blur(2px);
+      }
+
+      &.about:after {
+        content: 'Acerca de mí';
+      }
+    }
+
     &.isDark {
     background: #111;
-
-        color: #eee;
+      color: #eee;
 
       h1,
       h2,
