@@ -33,7 +33,7 @@ const Features = () => {
                                     </div>
 
                                     <div className={styles.media}>
-                                        <img src="https://cdn.dribbble.com/users/365424/screenshots/10827250/media/f69daf77f01a3c16018c66f5c8c55c19.png" className="img-fluid" alt="Site Mockup"/>
+                                        <img src="/img/web-mockup.png" className="img-fluid" alt="Site Mockup"/>
                                     </div>
 
                                     <div>
