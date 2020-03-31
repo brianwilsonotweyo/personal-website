@@ -1,0 +1,36 @@
+.f {
+    &__box {
+        margin: 20px 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr  1fr;
+        grid-gap: 15px;
+
+        &-item {
+            padding: 10px;
+            
+            border-radius: 3px;
+            border: 1px solid var(--dark);
+            margin-bottom: 15px;
+
+            &.isDark {
+                color: var(--light);
+                background-color: var(--dark);
+            }
+
+            p {
+                font-size: .9rem;
+                line-height: 1.2rem;
+                margin: 0;
+            }
+
+            h4 {
+                font-size: 1.1rem;
+                margin: 0 0 10px;
+            }
+
+
+        }
+    }
+
+}
