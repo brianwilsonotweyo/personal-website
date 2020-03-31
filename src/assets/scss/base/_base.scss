@@ -76,6 +76,12 @@ a {
       &.about:after {
         content: 'Acerca de mí';
       }
+      &.mywork:after {
+        content: 'Cómo trabajo';
+        opacity: .03;
+        left: 10%;
+        right: 10%;
+      }
     }
 
     &.isDark {

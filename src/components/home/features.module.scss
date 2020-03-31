@@ -3,29 +3,79 @@
         margin: 20px 0;
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 2fr  1fr;
+        grid-template-columns: 200px 1fr  200px;
         grid-gap: 15px;
+
+        .media {
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                box-shadow: 0 15px 15px rgba(0, 0, 0, .1);
+            }
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 15px;
+            display: block;
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: var(--light);
+            border-radius: 50%;
+
+            &__responsive {
+                background-image: url('/img/features/responsive.png');
+            }
+
+            &__modern {
+                background-image: url('/img/features/modern.png');
+            }
+
+            &__professional {
+                background-image: url('/img/features/professional.png');
+            }
+
+            &__search {
+                background-image: url('/img/features/search.png');
+            }
+
+            &__fast {
+                background-image: url('/img/features/fast.png');
+            }
+            
+        }
 
         &-item {
             padding: 10px;
-            
+            text-align: center;
             border-radius: 3px;
-            border: 1px solid var(--dark);
+            //border: 1px solid var(--dark);
             margin-bottom: 15px;
 
             &.isDark {
                 color: var(--light);
                 background-color: var(--dark);
+                h4 {
+                    font-size: .9rem;
+                    color: var(--light);
+                    margin: 0 0 10px;
+                }
             }
 
             p {
-                font-size: .9rem;
+                font-size: .8rem;
                 line-height: 1.2rem;
                 margin: 0;
             }
 
             h4 {
-                font-size: 1.1rem;
+                font-size: .9rem;
+                color: var(--dark);
                 margin: 0 0 10px;
             }
 
