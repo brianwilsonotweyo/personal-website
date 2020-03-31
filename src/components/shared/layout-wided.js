@@ -3,7 +3,7 @@ import Header from './header'
 import Footer from './footer'
 
 // Global Styles
-import '../assets/scss/main.scss';
+import '../../assets/scss/main.scss';
 
 import styles from './layout.module.scss';
 
