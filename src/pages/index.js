@@ -13,11 +13,11 @@ const IndexPage = () => {
             <Hero/>
             <About/>
             <Features/>
-            <ContactBar 
+            {/* <ContactBar 
             isDark={true}
             btnText="Escríbeme" 
             contentText="¿Tienes una idea para tu nuevo proyecto?" 
-            contentSubText="Yo puedo ayudarte a hacerlo realidad."/>
+            contentSubText="Yo puedo ayudarte a hacerlo realidad."/> */}
         </LayoutWided>
     )
 }
