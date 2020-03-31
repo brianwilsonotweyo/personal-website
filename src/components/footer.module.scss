@@ -1,3 +1,45 @@
 .footer {
     margin-top: 50px;
+    padding: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.social-list {
+    list-style: none;
+    margin: 0;
+    display: inline-flex;
+    justify-self: flex-start;
+    align-items: center;
+    
+        > li {
+            margin-right: 15px;
+
+            &:before {
+                content: unset;
+            }
+
+            a {
+                display: block;
+                padding: 5px;
+                transition: all ease-in-out .2s;
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: 30px;
+                }
+
+                &:hover,
+                &:focus {
+                    transform: translateY(-2px)
+                }
+            }
+
+            
+        }
+
+}
+
+.copyright {
+    padding: 5px;
 }
