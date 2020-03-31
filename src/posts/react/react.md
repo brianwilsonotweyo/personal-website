@@ -1,6 +1,7 @@
 ---
 title: "React is a popular library"
 date: "27-03-2020"
+tags: "React, Javascript"
 ---
 
 Gatsby is react based and it's cool

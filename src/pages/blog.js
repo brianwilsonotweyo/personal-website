@@ -30,10 +30,16 @@ const Blog =() => {
 
     return (
         <Layout>
-            <h1>My Blog</h1>
-            <p>This is the blog page</p>
-            <hr/>
-            <ol className={styles.posts}>
+          <div className="ui__page">
+            <div className="page__header">
+              <h1>Blog</h1>
+              <hr/>
+            </div>
+            <div className="page__content">
+              <div className="page__content-description">
+                <p>Algún contenido que encontré interesante para compartir.</p>
+              </div>
+              <ol className={styles.posts}>
                 {
                     edges.map((item, index) => (
                         <li className={styles.post} key={index}>
@@ -44,7 +50,9 @@ const Blog =() => {
                         </li>
                     ))
                 }
-            </ol>
+              </ol>
+            </div>
+          </div>
         </Layout>
     )
 }

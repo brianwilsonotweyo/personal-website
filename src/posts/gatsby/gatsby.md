@@ -1,6 +1,7 @@
 ---
 title: "The great Gatsby Bootcamp"
 date: "28-13-2020"
+tags: "React, Gatsby, Javascript"
 ---
 
 This is my first gatsby project and it's great

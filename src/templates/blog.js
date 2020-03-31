@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/shared/layout';
 
@@ -19,11 +19,26 @@ export const query = graphql`
 const Blog = props => {
     return (
         <Layout>
-            <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-            <p>{props.data.markdownRemark.frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{
+
+<div className="ui__page">
+            <div className="page__header">
+              <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+              <p className="page__header-metas">Publicado {props.data.markdownRemark.frontmatter.date}</p>
+              <ul className="page__header-breadcrumb">
+                  <li><Link to="/">Inicio</Link></li>
+                  <li><Link to="/blog">Blog</Link></li>
+                  <li>{props.data.markdownRemark.frontmatter.title}</li>
+              </ul>
+              <hr/>
+            </div>
+            <div className="page__content">
+              <div className="page__content-description" dangerouslySetInnerHTML={{
                 __html: props.data.markdownRemark.html
-            }}></div>
+            }}>
+                
+              </div>
+            </div>
+          </div>
         </Layout>
     )
 }
