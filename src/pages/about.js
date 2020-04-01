@@ -52,7 +52,7 @@ const AboutPage = () => {
                 <div className="mb-5">
                     <h4>Aprendiendo</h4>
                     <div className={styles.sk__grid}>
-                        <SkillItem logo="redux.png" name="Redux" />
+                        <SkillItem logo="reduxx.png" name="Redux" />
                         <SkillItem logo="csharp.png" name="C#" />
                         <SkillItem logo="graphql.png" name="Graphql" />
                     </div>

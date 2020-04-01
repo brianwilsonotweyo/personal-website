@@ -1,6 +1,7 @@
-const apiURL = "http://18.188.241.237:5100/api/leads/set";
+const apiURL = "https://pixelagil.herokuapp.com/api/leads/set";
 
 export const sendMessage = async (payload) =>  {
+    payload.notify = true;
     try {
         const options = {
             method: 'POST',

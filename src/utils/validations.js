@@ -7,7 +7,7 @@ export const validateMessage = message => {
         subject: Joi.string().min(3).max(50).required(),
         email: Joi.string()
         .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
-        content: Joi.string().alphanum().min(3).max(300).required(),
+        content: Joi.string().min(3).max(300).required()
     });
 
     return schema.validate(message);
