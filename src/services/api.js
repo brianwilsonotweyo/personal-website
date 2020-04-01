@@ -1,4 +1,4 @@
-const apiURL = "https://pixelagil.herokuapp.com/api/leads/set";
+const apiURL = 'https://pixelagil.herokuapp.com/api';
 
 export const sendMessage = async (payload) =>  {
     payload.notify = true;
@@ -11,7 +11,7 @@ export const sendMessage = async (payload) =>  {
             body: JSON.stringify(payload)
           }
 
-        const response = await fetch(apiURL, options);
+        const response = await fetch(apiURL + '/leads/set', options);
         const data = await response.json();
 
         return data;
@@ -19,4 +19,16 @@ export const sendMessage = async (payload) =>  {
     } catch (error) {
         throw new Error(error.message);
     }
+}
+
+export const getProjects = async () => {
+  try {
+    const response = await fetch(apiURL + '/projects/set');
+    const data = await response.json();
+
+    return data;
+    
+  } catch (error) {
+      throw new Error(error.message);
+  }
 }

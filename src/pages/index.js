@@ -1,5 +1,6 @@
 import React from "react";
-import LayoutWided from '../components/shared/layout-wided';
+//import LayoutWided from '../components/shared/layout-wided';
+import Layout from '../components/shared/layout';
 
 import SEO from '../components/seo';
 
@@ -11,7 +12,7 @@ import ContactBar from '../components/shared/contact-bar';
 const IndexPage = () => {
 
     return ( 
-        <LayoutWided>
+        <Layout wided={true}>
             <SEO title="Bienvenido" />
             <Hero/>
             <About/>
@@ -21,7 +22,7 @@ const IndexPage = () => {
             btnText="Escríbeme" 
             contentText="¿Tienes una idea para tu nuevo proyecto?" 
             contentSubText="Yo puedo ayudarte a hacerlo realidad."/>
-        </LayoutWided>
+        </Layout>
     )
 }
 
