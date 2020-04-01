@@ -8,6 +8,8 @@
     &__item {
         padding: 10px;
         text-align: center;
+        background: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 25px;
 
         &-name {
             display: block;

@@ -157,8 +157,11 @@ a {
 
         &-description {
           line-height: 1.8rem;
-          a {
-            color: var(--pink);
+
+          p {
+            a {
+              color: var(--pink);
+            }
           }
         }
       }
