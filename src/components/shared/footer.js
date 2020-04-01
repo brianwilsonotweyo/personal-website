@@ -21,7 +21,7 @@ const Footer = () => {
         <div className={styles.footer}>
             <div className="row">
                 <div className="col-sm-6">
-                    <div className={styles.copyright}>AlexLab, <strong>&copy; { (new Date()).getFullYear()}</strong></div>
+                    <div className={styles.copyright}>AlexLab, no <strong>copyright</strong> 😁 { (new Date()).getFullYear()}</div>
                 </div>
                 <div className="col-sm-6 text-right">
                     <ul className={styles.socialList}>

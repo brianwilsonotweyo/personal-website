@@ -1,0 +1,11 @@
+.c {
+    &__area {
+        margin: 0 auto;
+        padding: 15px;
+        background: var(--light);
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, .03);
+        box-shadow: 0 15px 15px rgba(0, 0, 0, .02);;
+        
+    }
+}

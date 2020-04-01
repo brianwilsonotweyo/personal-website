@@ -5,6 +5,7 @@ import Footer from './footer'
 // Global Styles
 import '../../assets/scss/main.scss';
 
+import 'simple-line-icons/css/simple-line-icons.css';
 import styles from './layout.module.scss';
 
 const Layout = (props) => {

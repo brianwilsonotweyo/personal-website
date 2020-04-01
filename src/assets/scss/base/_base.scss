@@ -37,7 +37,7 @@ a {
 body {
  font-family: $text-font-stack;
  color: $text-color;
- font: normal 100% / 1.4 $text-font-stack;
+ font-size: .9rem;
  background: $body-background;
 
   @media(max-width: 768px) {
@@ -114,12 +114,13 @@ a {
         margin-top: 15px;
         padding: 10px;
         h1 {
-          font-size: 2.5rem;
+          font-size: 2rem;
+          letter-spacing: -1px;
           margin: 0 0 5px;
         }
 
         &-metas {
-          font-size: 1rem;
+          font-size: .9rem;
           padding: 5px;
           margin: 0;
           color: #737373;

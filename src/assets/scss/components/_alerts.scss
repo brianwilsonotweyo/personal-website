@@ -1,0 +1,40 @@
+.alert {
+    font-size: .8rem;
+    color: #111;
+    background: #fff;
+    span {
+        margin-right: 5px;
+        font-weight: 600;
+    }
+    &.alert-success {
+        span {
+            color: var(--green);
+        }
+    }
+
+    &.alert-danger {
+        span {
+            color: var(--red);
+        }
+    }
+
+    &.alert-warning {
+        span {
+            color: var(--yellow);
+        }
+    }
+
+    &.alert-info {
+        border-color: var(--blue);
+        span {
+            color: var(--blue);
+        }
+    }
+
+    &.alert-primary {
+        border-color: var(--primary);
+        span {
+            color: var(--primary);
+        }
+    }
+}
