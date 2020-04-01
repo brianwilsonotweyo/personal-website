@@ -58,7 +58,7 @@ const AboutPage = () => {
 
                 <div className="mb-5">
                 <h4>También conozco</h4>
-                <p>Consumo de API REST, Git Flow, Bootstrap, Photoshop. 😄</p>
+                <p>Consumo de API REST, Git Flow, Bootstrap, Photoshop. <span role="img" aria-label="Smile">😄</span></p>
                 </div>
 
                 <h3>¿Quieres conocer algunos de mis trabajos?</h3>
