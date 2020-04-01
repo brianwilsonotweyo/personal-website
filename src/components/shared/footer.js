@@ -1,5 +1,6 @@
 import React from 'react';
 import {  graphql, useStaticQuery } from 'gatsby';
+import SocialList from './social-list';
 
 import styles from './footer.module.scss';
 
@@ -24,23 +25,7 @@ const Footer = () => {
                     <div className={styles.copyright}>AlexLab, no <strong>copyright</strong> 😁 { (new Date()).getFullYear()}</div>
                 </div>
                 <div className="col-sm-6 text-right">
-                    <ul className={styles.socialList}>
-                        <li>
-                            <a href={data.site.siteMetadata.twitter} target="_blank" rel="noopener noreferrer">
-                                <img src="/img/social/twitter-dark.png" alt="Twitter"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href={data.site.siteMetadata.linkedin} target="_blank" rel="noopener noreferrer">
-                                <img src="/img/social/linkedin-dark.png" alt="Linedin"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href={data.site.siteMetadata.github} target="_blank" rel="noopener noreferrer">
-                                <img src="/img/social/github-dark.png" alt="Github"/>
-                            </a>
-                        </li>
-                    </ul>
+                    <SocialList/>
                 </div>
             </div>
         </div>
