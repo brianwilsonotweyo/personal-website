@@ -1,8 +1,7 @@
 import React from 'react';
 import {  graphql, useStaticQuery } from 'gatsby';
-
+import SEO from '../components/seo';
 import Layout from '../components/shared/layout';
-
 import ContactForm from '../components/contact/ContactForm';
 
 const ContactPage = () => {
@@ -28,9 +27,10 @@ const ContactPage = () => {
 
     return ( 
         <Layout>
+        <SEO title="Contactar" />
         <div className="ui__page">
             <div className="page__header">
-              <h1>Contacto</h1>
+              <h1>Contactar</h1>
               <hr/>
             </div>
             <div className="page__content">

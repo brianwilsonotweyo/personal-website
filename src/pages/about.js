@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/shared/layout';
+import SEO from '../components/seo';
 
 import styles from './about.module.scss';
 
@@ -21,6 +22,7 @@ const SkillItem = props => {
 const AboutPage = () => {
     return (
         <Layout>
+            <SEO title="Acerca de mí" />
             <div className="ui__page">
             <div className="page__header">
               <h1>Acerca de mí</h1>

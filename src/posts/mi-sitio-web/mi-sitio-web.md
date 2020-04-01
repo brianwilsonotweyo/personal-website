@@ -1,6 +1,7 @@
 ---
 title: "Mi sitio web personal"
 date: "01-04-2020"
+description: "Mi primer sitio usando Gatsby"
 tags: "React, Gatsby, Javascript"
 
 ---

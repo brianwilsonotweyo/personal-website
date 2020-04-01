@@ -6,11 +6,13 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Alex Site",
-    author: "Alex Vivas",
+    title: "AlexLab - Frontend Developer",
+    author: "Alejandro Vivas",
     twitter: "https://twitter.com/pixelagil",
     github: "https://github.com/alexsegen",
-    linkedin: "https://www.linkedin.com/in/alejandro-vivas/"
+    linkedin: "https://www.linkedin.com/in/alejandro-vivas/",
+    description: `Alejandro Vivas - Frontend Developer.`,
+    siteUrl: `https://alexlab.now.sh`
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -37,5 +39,6 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-react-helmet"
   ],
 }
