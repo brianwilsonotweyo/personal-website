@@ -23,7 +23,7 @@ export const sendMessage = async (payload) =>  {
 
 export const getProjects = async () => {
   try {
-    const response = await fetch(apiURL + '/projects/set');
+    const response = await fetch(apiURL + '/projects/get');
     const data = await response.json();
 
     return data;
