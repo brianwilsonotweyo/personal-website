@@ -48,17 +48,17 @@ const ContactPage = () => {
 
                               <ul>
                                     <li className="mb-2">
-                                      <a href={data.site.siteMetadata.twitter} target="_blank">
+                                      <a href={data.site.siteMetadata.twitter} target="_blank" rel="noopener noreferrer">
                                         <img src="/img/social/twitter-dark.png" alt="Twitter" style={iconStyles} /> Pixelagil
                                       </a>
                                     </li>
                                     <li className="mb-2">
-                                      <a href={data.site.siteMetadata.github} target="_blank">
+                                      <a href={data.site.siteMetadata.github} target="_blank" rel="noopener noreferrer">
                                         <img src="/img/social/github-dark.png" alt="Github" style={iconStyles} /> AlexSegen
                                       </a>
                                     </li>
                                     <li className="mb-2">
-                                      <a href={data.site.siteMetadata.linkedin} target="_blank">
+                                      <a href={data.site.siteMetadata.linkedin} target="_blank" rel="noopener noreferrer">
                                         <img src="/img/social/linkedin-dark.png" alt="Linkedin" style={iconStyles} /> Alejandro-Vivas
                                       </a>
                                     </li>

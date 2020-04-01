@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+import { validateMessage } from '../../utils/validations';
 import Alert from '../../components/alert';
 import { sendMessage } from '../../services/api';
 
@@ -32,8 +34,7 @@ const ContactForm = () => {
         });
     }
 
-    const send = e => {
-        e.preventDefault();
+    const send = () => {
 
         setLoading(true)
         setResult(initialResult)
@@ -64,9 +65,34 @@ const ContactForm = () => {
         });
     }
 
+    const validateForm = async (e) => {
+
+        e.preventDefault();
+
+        setResult(initialPayload);
+
+        const result = validateMessage(payload);
+
+        if(result.error) {
+
+            setResult({
+                show: true,
+                message: result.error.details[0].message,
+                short: "Hey,",
+                type: "warning"
+            });
+
+            return false
+        }
+
+        send()
+        
+        return result;
+    }
+
     return (
         <div className={styles.c__area}>
-            <form onSubmit={send}>
+            <form onSubmit={validateForm}>
                 <div className="row">
                     <div className="col-sm-6">
                         <div className="form-group">
@@ -75,7 +101,7 @@ const ContactForm = () => {
                                     <span className="input-group-text" id="basic-addon1"><i className="icons icon-user"></i></span>
                                 </div>
                                 <input type="text" className="form-control" placeholder="Tu nombre completo"
-                                required
+                                
                                  name="name"
                                  disabled={loading}
                                  value={payload.name}
@@ -91,7 +117,7 @@ const ContactForm = () => {
                                     <span className="input-group-text" id="basic-addon1"><i className="icons icon-envelope"></i></span>
                                 </div>
                                 <input type="email" className="form-control" placeholder="Tu Email"
-                                required
+                                
                                  name="email"
                                  disabled={loading}
                                  value={payload.email}
@@ -105,7 +131,7 @@ const ContactForm = () => {
                     <div className="col-sm-12">
                         <div className="form-group">
                             <textarea className="form-control" placeholder="Tu mensaje" cols="30" rows="3"
-                            required
+                            
                              name="content"
                              disabled={loading}
                              value={payload.content}
