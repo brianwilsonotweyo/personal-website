@@ -154,6 +154,13 @@ a {
       }
       &__content {
         padding: 20px 20px 50px;
+
+        &-description {
+          line-height: 1.8rem;
+          a {
+            color: var(--pink);
+          }
+        }
       }
     }
     

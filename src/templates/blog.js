@@ -11,12 +11,13 @@ export const query = graphql`
                 date
             }
             html
-
         }
     }
 `;
 
 const Blog = props => {
+
+  console.log(props);
     return (
         <Layout>
 
