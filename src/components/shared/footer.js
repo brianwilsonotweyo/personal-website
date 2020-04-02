@@ -1,5 +1,4 @@
 import React from 'react';
-import {  graphql, useStaticQuery } from 'gatsby';
 import SocialList from './social-list';
 
 import styles from './footer.module.scss';
