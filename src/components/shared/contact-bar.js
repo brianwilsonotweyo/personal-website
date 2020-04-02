@@ -9,14 +9,14 @@ const ContactBar = props => {
     const dark = isDark ? styles.cb__wrapper__isDark : ''
 
     return (
-        <div className={classes + ' ' + dark }>
-            <div className={styles.cb__wrapperContent}>
+        <div className={classes + ' ' + dark}>
+            <div className={styles.cb__wrapperContent  + " wow fadeInUp"}>
                 <h2>{ contentText }</h2>
                 {
                     contentSubText ? <p>{ contentSubText }</p> : null
                 }
             </div>
-            <div className={styles.cb__wrapperAction}>
+            <div className={styles.cb__wrapperAction  + " wow fadeInUp"}>
                 <Link className={'btn btn-secondary ' + styles.cta} to="/contact">{ btnText }</Link>
             </div>
         </div>

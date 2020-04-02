@@ -1,6 +1,7 @@
 import React from 'react';
-import Layout from '../components/shared/layout';
 import SEO from '../components/seo';
+import Layout from '../components/shared/layout';
+import ContactBar from '../components/shared/contact-bar';
 
 import PortfolioContainer from '../components/portfolio/PortfolioContainer';
 
@@ -20,6 +21,11 @@ const MyWork = () => {
               <PortfolioContainer/>
             </div>
           </div>
+          <ContactBar 
+            isDark={true}
+            btnText="Escríbeme" 
+            contentText="¿Tienes una idea para tu nuevo proyecto?" 
+            contentSubText="Yo puedo ayudarte a hacerlo realidad."/>
         </Layout>
     )
 }

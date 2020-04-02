@@ -12,7 +12,7 @@ const Features = () => {
                                 <h2 className="ui__section-title text-center mywork mb-5">¿Cómo trabajo?</h2>
                                 <div className={styles.f__box}>
 
-                                    <div>
+                                    <div className="wow fadeInLeft">
                                         <div className={styles.f__boxItem}>
                                             <span className={styles.icon + ' ' + styles.icon__responsive}></span>
                                             <h4>DISEÑO RESPONSIVE</h4>
@@ -32,12 +32,12 @@ const Features = () => {
                                         </div>
                                     </div>
 
-                                    <div className={styles.media}>
+                                    <div className={styles.media   + " wow fadeInUp"}>
                                         <img src="/img/web-mockup.png" className="img-fluid" alt="Site Mockup"/>
                                     </div>
 
-                                    <div>
-                                    <div className={styles.f__boxItem}>
+                                    <div className="wow fadeInRight">
+                                        <div className={styles.f__boxItem}>
                                             <span className={styles.icon + ' ' + styles.icon__search}></span>
                                             <h4>PARA BUSCADORES</h4>
                                             <p>Sitios listos para ser encontrados a través de los buscadores más populares y obtener presencia en Internet.</p>

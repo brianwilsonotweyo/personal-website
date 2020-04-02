@@ -38,15 +38,15 @@ const ContactPage = () => {
                   <div className="row">
                       <div className="col-sm-6">
                           <div className="mb-2">
-                            <p>Escríbeme para compartir ideas o soluciones que pueda aportar.</p>
+                            <p className=" wow fadeInUp">Escríbeme para compartir ideas o soluciones que pueda aportar.</p>
                             <ContactForm/>
                           </div>
                       </div>
                       <div className="col-sm-6">
                           <div>
-                              <p>Encuéntrame también en</p>
+                              <p className=" wow fadeInUp">Encuéntrame también en</p>
 
-                              <ul>
+                              <ul className=" wow fadeInUp">
                                     <li className="mb-2">
                                       <a href={data.site.siteMetadata.twitter} target="_blank" rel="noopener noreferrer">
                                         <img src="/img/social/twitter-dark.png" alt="Twitter" style={iconStyles} /> Pixelagil
@@ -64,7 +64,7 @@ const ContactPage = () => {
                                     </li>
                               </ul>
 
-                              <h4 className="mt-5">¡Responderé <br/> lo antes posible! 🚀</h4>
+                              <h4 className="mt-5  wow fadeInUp">¡Responderé <br/> lo antes posible! 🚀</h4>
 
                           </div>
                       </div>

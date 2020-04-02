@@ -295,10 +295,10 @@ mytoast.success("Hello, this is my custom notification!");
         <div className={ styles.hero }>
             <div className={ styles.heroPadding }>
                 <div className={ styles.heroContent }>
-                    <img src="/img/toastmejs/icon.png" className={ styles.toastmeIcon }/>
+                    <img src="/img/toastmejs/icon.png" className={ styles.toastmeIcon } alt="Toastme"/>
                     <h2>Notifications and Dialogs <br/> on your Website</h2>
                     <p><strong>ToastmeJS</strong> is a very simple, flexible and light weigth plugin that shows <strong>Notifications</strong> and modal <strong>Dialogs</strong> on your website with vanilla javascript!</p>
-                    <a href="https://github.com/AlexSegen/toastmejs/releases" className={ styles.cta + " btn btn-secondary btn-lg"} target="_blank">Download</a>
+                    <a rel="noopener noreferrer" href="https://github.com/AlexSegen/toastmejs/releases" className={ styles.cta + " btn btn-secondary btn-lg"} target="_blank">Download</a>
                 </div>
             </div>
         </div>

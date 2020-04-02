@@ -8,7 +8,7 @@ const PortfolioItem = ({photo, thumb, name, description, category, url, publishe
     }
 
     return (
-        <div href={url} className={styles.p__item}>
+        <div href={url} className={styles.p__item + " wow fadeInUp"}>
             <div className={styles.p__itemOverlay}>
             
                 <div>

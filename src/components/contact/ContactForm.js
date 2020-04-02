@@ -91,7 +91,7 @@ const ContactForm = () => {
     }
 
     return (
-        <div className={styles.c__area}>
+        <div className={styles.c__area + " wow fadeInUp"}>
             <form onSubmit={validateForm}>
                 <div className="row">
                     <div className="col-sm-6">

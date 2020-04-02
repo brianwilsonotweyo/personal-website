@@ -14,7 +14,7 @@ const Hero = () => {
     
     return (
         <div className={styles.hero__wrapper}>
-            <div className={styles.hero__content}>
+            <div className={styles.hero__content  + " wow fadeInUp"}>
                 <img src="/img/logo-color.png" className={styles.logo} alt=""/>
 
                 <h4 className={styles.subtitle}>¡Hola! soy Alejandro y trabajo con</h4>
