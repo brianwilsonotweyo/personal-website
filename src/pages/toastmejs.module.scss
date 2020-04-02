@@ -1,6 +1,10 @@
 .toastme-landing {
 
 
+    .cta {
+        box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+    }
+    
     .toastme-icon {
         max-width: 200px;
         margin: 10px auto;
@@ -16,12 +20,15 @@
     }
     
     pre{
-       margin: 0!important;
-       font-size: 12px!important;
+        margin: 0 !important;
+        font-size: 12px !important;
+        background: #111;
+        color: #eee;
+        padding: 10px;
     }
     
     .hero {
-       background-color: #f5f6ff;
+        background-color: var(--light);
        .hero-padding {
            padding: 100px 20px;
        }

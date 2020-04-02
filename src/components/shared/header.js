@@ -46,6 +46,9 @@ const Header = () => {
                             <Link className={styles.nav__item} activeClassName={styles.active} to="/blog">Blog</Link>
                         </li>
                         <li>
+                            <Link className={styles.nav__item + ' ' + styles.nav__itemFeatured} activeClassName={styles.active} to="/toastme">Toastme JS 📢</Link>
+                        </li>
+                        <li>
                             <Link className={styles.nav__item} activeClassName={styles.active} to="/contact">Contáctame</Link>
                         </li>
                     </nav>

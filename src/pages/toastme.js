@@ -1,11 +1,78 @@
 import React, {useEffect} from 'react';
 import Layout from '../components/shared/layout';
-import { toastme, Toastme } from 'toastmejs';
+import SEO from '../components/seo';
 
+import { toastme, Toastme } from 'toastmejs';
 import 'toastmejs/dist/css/toastme.css';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-tomorrow.css';
+
 import styles from './toastmejs.module.scss';
 
 const ToastmeComponent = () => {
+
+  const codeImport = `<link rel="stylesheet" href="https://unpkg.com/toastmejs@latest/dist/css/toastme.css">
+<script src="https://unpkg.com/toastmejs@latest/dist/js/toastme.min.js"></script>
+`;
+
+
+const codeExampleToastme = `
+toastme.default("This is a 'default' notification")
+
+toastme.success("This is a 'success' notification")
+
+toastme.error("This is an 'error' notification")
+
+toastme.warning("This is a 'warning' notification")
+
+toastme.info("This is an 'info' notification")
+
+`;
+
+const codeDialog = `
+//Example
+toastme.yesNoDialog({
+    title: "You are the Winner!",
+    text: "Do you want to pick your price?",
+    textConfirm: "Confirm",
+    textCancel: "Cancel", 
+    showCancel: true, // true or false
+    type: "success", // 'success', 'danger', 'warning', 'info' or 'question'
+    dark: false, // Show dark theme? 'true' or 'false'
+}).then(function(value) {
+    if (value) {
+        console.log('You clicked Confirm')
+    } else {
+        console.log('You clicked Cancel')
+    }
+});
+
+`;
+    
+const codeConfigToastme = `
+// 1. Customize
+const config = {
+    timeout: 5000,
+    positionY: "bottom", // top or bottom
+    positionX: "center", // right left, center
+    distanceY: 20, // Integer value
+    distanceX: 20, // Integer value
+    zIndex: 100, // Integer value
+    theme: "default", // default, ligh or  dark (leave empty for "default" theme)
+    duplicates: false // true or false - by default it's false
+};
+
+// 2. Create a new Toastmejs class instance 
+
+const mytoast = new Toastme(config);
+
+// 3. Call it whenever you want!
+
+mytoast.success("Hello, this is my custom notification!");
+    `;
+    // Returns a highlighted HTML string
+
+
 
     function simpleNotifications(param) {
         switch (param) {
@@ -223,6 +290,7 @@ const ToastmeComponent = () => {
 
     return (
         <Layout wided={true}>
+        <SEO title="ToastmeJS" description="Puglin de Notificaciones y Diálogos en tu sitio web" />
         <div className={ styles.toastmeLanding }>
         <div className={ styles.hero }>
             <div className={ styles.heroPadding }>
@@ -230,7 +298,7 @@ const ToastmeComponent = () => {
                     <img src="/img/toastmejs/icon.png" className={ styles.toastmeIcon }/>
                     <h2>Notifications and Dialogs <br/> on your Website</h2>
                     <p><strong>ToastmeJS</strong> is a very simple, flexible and light weigth plugin that shows <strong>Notifications</strong> and modal <strong>Dialogs</strong> on your website with vanilla javascript!</p>
-                    <a href="https://github.com/AlexSegen/toastmejs/releases" className="btn btn-primary btn-lg">DOWNLOAD</a>
+                    <a href="https://github.com/AlexSegen/toastmejs/releases" className={ styles.cta + " btn btn-secondary btn-lg"} target="_blank">Download</a>
                 </div>
             </div>
         </div>
@@ -254,10 +322,12 @@ const toastme = require('toastmejs')</code>
                <p className="font-weight-bold">Via CDN</p>
                <p>Import the CSS via a &lt;link /&gt; and &lt;scripts /&gt; elements:</p>
                <pre>
-<code className="html">&lt;link rel="stylesheet" href="https://unpkg.com/toastmejs@latest/dist/css/toastme.css"&gt;
-&lt;script src="https://unpkg.com/toastmejs@latest/dist/js/toastme.min.js"&gt;&lt;/script&gt;</code>
-</pre>
-               <p className="font-weight-bold">Download</p>
+                <code dangerouslySetInnerHTML={{
+                                __html: Prism.highlight(codeImport, Prism.languages.html, 'html')
+                            }}>
+                </code>
+              </pre>
+               <p className="font-weight-bold mt-5">Download</p>
                <p>Or simply <a href="https://github.com/AlexSegen/toastmejs/releases">download</a> it and include necesary CSS/JS files to your project.</p>
             </div>
          </div>
@@ -281,20 +351,14 @@ const toastme = require('toastmejs')</code>
                 <li>Default</li>
               </ul>
 
-              <p className="font-weight-bold">How to use it?</p>
+              <p className="font-weight-bold">How to use it? </p>
               <p>Once you have imported toastmejs, you can call its methods like this:</p>
-
-<pre>
-<code className="javascript">toastme.default("This is a 'default' notification")
-toastme.success("This is a 'success' notification")
-
-toastme.error("This is an 'error' notification")
-
-toastme.warning("This is a 'warning' notification")
-
-toastme.info("This is an 'info' notification")</code>
-</pre>
-
+            <pre>
+                <code dangerouslySetInnerHTML={{
+                                __html: Prism.highlight(codeExampleToastme, Prism.languages.javascript, 'javascript')
+                            }}>
+                </code>
+            </pre>
           </div>
         </div>
         <div className="col-sm-4">
@@ -366,26 +430,12 @@ toastme.info("This is an 'info' notification")</code>
               <div className="card shadow">
                 <div className="card-header">Notification Example</div>
                 <div className="card-body">
-<pre>
-<code className="javascript">
-const config = {`{
-    timeout: 5000,
-    positionY: "bottom", // top or bottom
-    positionX: "center", // right left, center
-    distanceY: 20, // Integer value
-    distanceX: 20, // Integer value
-    zIndex: 100, // Integer value
-    theme: "default", // default, ligh or  dark (leave empty for "default" theme)
-    duplicates: false // true or false - by default it's false
-}`};
-
-//Create a new Toastmejs class instance
-const mytoast = new Toastme(config);
-
-//Call it whenever you want!
-mytoast.success("Hello, this is my custom notification!");
-</code>
-</pre>
+                    <pre>
+                    <code dangerouslySetInnerHTML={{
+                                    __html: Prism.highlight(codeConfigToastme, Prism.languages.javascript, 'javascript')
+                                }}>
+                    </code>
+                    </pre>
                   </div>
               </div>
             </div>
@@ -481,25 +531,12 @@ mytoast.success("Hello, this is my custom notification!");
                 <div className="card shadow">
                   <div className="card-header">Dialog Example</div>
                   <div className="card-body">
-<pre>
-<code className="javascript">//Example
-toastme.yesNoDialog({`{
-    title: "You are the Winner!",
-    text: "Do you want to pick your price?",
-    textConfirm: "Confirm",
-    textCancel: "Cancel", 
-    showCancel: true, // true or false
-    type: "success", // 'success', 'danger', 'warning', 'info' or 'question'
-    dark: false, // Show dark theme? 'true' or 'false'
-}`}).then(function(value) {`{
-    if (value) {
-        console.log('You clicked Confirm')
-    } else {
-        console.log('You clicked Cancel')
-    }
-}`});
-</code>
-</pre>
+                    <pre>
+                        <code dangerouslySetInnerHTML={{
+                        __html: Prism.highlight(codeDialog, Prism.languages.javascript, 'javascript')
+                        }}>
+                        </code>
+                    </pre>
                     </div>
                 </div>
               </div>
