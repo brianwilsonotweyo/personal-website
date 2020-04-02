@@ -14,13 +14,13 @@ const About =  () => {
                         <div className="ui__section-content">
                             <h2 className="ui__section-title about wow fadeInUp">Acerca de mí</h2>
 
-                            <p className="wow fadeInUp">Me llamo Alejandro Vivas, y he trabajado por mas de 6 años con Desarrollo Frontend y Diseño Web. Tengo experiencia trabajando con diferentes tecnologías para Diseño Web tales como, <strong>HTML5, CSS3/SASS, Javascript</strong>.</p>
+                            <p className="wow fadeInUp">Me llamo Alejandro Vivas, y he trabajado por mas de 6 años con Desarrollo Frontend y Diseño Web. Tengo experiencia con diferentes tecnologías tales como, <strong>HTML5, CSS3/SASS, Javascript</strong>.</p>
                             
                             <img src="/img/tech-logos.png" style={techStyles} className="img-fluid d-block mt-4 wow fadeInUp" alt="I love JavaScript"/>
                             <code className="font-weight-light my-3 d-block text-center wow fadeInUp">Demás está decir que mi lenguaje favorito es Javascript ❤</code>
 
                             <h5 className="mt-4 wow fadeInUp">¿Herramientas de diseño?</h5>
-                            <p className="wow fadeInUp">Manejo muy bien Adobe Photoshop, Illustrator, Xperience Design, Balsamiq, entre otros. Me gusta mucho preocuparme por el Look & Feel de un producto, así como también mantener principios básicos de UI / UX.</p>
+                            <p className="wow fadeInUp">Manejo muy bien Adobe Photoshop, Illustrator, Xperience Design, Balsamiq, entre otros. Me preocupo mucho por el Look & Feel de un producto, así como también mantener principios básicos de UI / UX.</p>
 
                         </div>
                     </div>
@@ -28,7 +28,6 @@ const About =  () => {
                         <div className="ui__section-content">
                             <img src="/img/carbon-v1.png" className="img-fluid" alt="I love React"/>
                         </div>
-
                     </div>
                 </div>
             </div>
