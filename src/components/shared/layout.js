@@ -16,7 +16,12 @@ const Layout = ({location, title, children, wided}) => {
     const container = wided ? styles.containerLayout : 'container ' + styles.containerLayout;
 
     useEffect(() => {
-        new WOW().init();
+        if (typeof window !== 'undefined') {
+            const wow = new WOW({
+                live: false
+            });
+            wow.init()
+        }
     });
 
     return ( 
