@@ -17,7 +17,7 @@ const Hero = () => {
             <div className={styles.hero__content  + " wow fadeInUp"}>
                 <img src="/img/logo-color.png" className={styles.logo} alt=""/>
 
-                <h4 className={styles.subtitle}>¡Hola! soy Alejandro y trabajo con</h4>
+                <h4 className={styles.subtitle}>Soy Alejandro y tabajo con</h4>
                 <h1 className={styles.title} id="target">Desarrollo Frontend</h1>
 
                 <Link to="/contact" className={"btn btn-secondary " + styles.cta}>Contáctame</Link>

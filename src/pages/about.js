@@ -27,8 +27,8 @@ const AboutPage = () => {
             <div className="page__content">
                 <div className="row">
                     <div className="col-sm-3">
-                        <div className="page__content-description" className={styles.side__box}>
-                            <div>
+                        <div className="page__content-description" >
+                            <div className={styles.side__box}>
                                 <img src="/img/me.jpg" alt="Yo" className={styles.side__boxPhoto} />
                                 <p className={styles.side__boxName}>Alejandro Vivas</p>
                                 <p className={styles.side__boxRol}><strong>Frontend Developer</strong></p>
