@@ -8,7 +8,7 @@ tags: "React, Gatsby, Javascript"
 
 ![Gatsby](./gatsby-banner.jpg)
 
-Siempre estoy dispuesto a aprender cosas nuevas, en lo que a tecnología se refiere. De hecho, especificamente **React** llama mucho mi atención; de hecho, investigando me topé posteriormente con **Gatsby**.
+Siempre estoy dispuesto a aprender cosas nuevas, en lo que a tecnología se refiere. De hecho, especificamente **React** llama mucho mi atención; es por ello que me topé posteriormente con **Gatsby**.
 
 En distintos foros, y redes sociales, como **Twitter** y **Facebook**, no paraban de mencionar **Gatsby**, así que dije -*¿Por qué no? Echemos un vistazo a ver de qué trata*.
 
@@ -22,4 +22,4 @@ Sin más que comentar, dejaré acá este magnífico *Bootcamp*, que seguro mucho
 
 👉 https://www.youtube.com/watch?v=8t0vNu2fCCM
 
-Finalmente, debo decir que Andrew Meta es un genio enseñando. No dudes en seguirlo en [Twitter](https://twitter.com/andrew_j_mead "Twitter")
+Finalmente, debo decir que Andrew Mead es un genio enseñando. No dudes en seguirlo en [Twitter](https://twitter.com/andrew_j_mead "Twitter")
