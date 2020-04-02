@@ -1,6 +1,8 @@
 .navbar {
     width: 100%;
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 2;
     background-color: #fff;
     padding: 10px 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
