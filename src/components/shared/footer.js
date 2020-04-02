@@ -5,18 +5,6 @@ import SocialList from './social-list';
 import styles from './footer.module.scss';
 
 const Footer = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                    author
-                    twitter
-                    github
-                    linkedin
-                }
-            }
-        }
-    `)
 
     return ( 
         <div className={styles.footer}>
