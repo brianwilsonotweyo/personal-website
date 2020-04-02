@@ -311,7 +311,7 @@ mytoast.success("Hello, this is my custom notification!");
                <h2 className={ styles.sectionTitle + ' bold'}>Installation</h2>
                <p>Toastme does not have any dependencies. Just run next command via NPM</p>
                <pre><code className="ssh">$ npm install toastmejs</code></pre>
-               <p>Then import toastme</p>
+               <p className="mt-3">Then import toastme</p>
                <pre>
 <code className="javascript">import {'{toastme}'} from 'toastmejs'
 
@@ -319,7 +319,7 @@ or
   
 const toastme = require('toastmejs')</code>
 </pre>
-               <p className="font-weight-bold">Via CDN</p>
+               <p className="font-weight-bold mt-5">Via CDN</p>
                <p>Import the CSS via a &lt;link /&gt; and &lt;scripts /&gt; elements:</p>
                <pre>
                 <code dangerouslySetInnerHTML={{
