@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/shared/layout';
 import SEO from '../components/seo';
-import SocialList from '../components/shared/social-list';
+import Sidebar from '../components/shared/sidebar';
 import styles from './about.module.scss';
 
 const SkillItem = ({ name, logo }) => {
@@ -27,15 +27,7 @@ const AboutPage = () => {
             <div className="page__content">
                 <div className="row">
                     <div className="col-sm-3">
-                        <div className="page__content-description" >
-                            <div className={styles.side__box}>
-                                <img src="/img/me.jpg" alt="Yo" className={styles.side__boxPhoto} />
-                                <p className={styles.side__boxName}>Alejandro Vivas</p>
-                                <p className={styles.side__boxRol}><strong>Frontend Developer</strong></p>
-                                <SocialList/>
-                                
-                            </div>
-                        </div>
+                        <Sidebar/>
                     </div>
                     <div className="col-sm-9">
                         <div className="page__content-description">
