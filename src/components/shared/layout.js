@@ -16,10 +16,7 @@ const Layout = ({location, title, children, wided}) => {
     const container = wided ? styles.containerLayout : 'container ' + styles.containerLayout;
 
     useEffect(() => {
-            const wow = new WOW({
-                live: false
-            });
-            wow.init()
+        new WOW.init()
     });
 
     return ( 
