@@ -52,6 +52,18 @@ a {
    color: $primary;
 }
 
+.card {
+  padding: 1rem 1rem!important;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.card-header {
+  background-color: rgba(0, 0, 0, 0.01);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 25px!important;
+}
 
 .ui {
   &__section {
