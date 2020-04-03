@@ -1,0 +1,35 @@
+.page {
+    &__error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+
+        &-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        &-logo {
+            width: auto;
+            max-height: 80px;
+            display: block;
+            margin: 10px auto;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        &-code {
+            font-size: 3.8rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        &-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 5px;
+        }
+
+    }
+}
