@@ -3,55 +3,71 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/shared/layout';
 import SEO from "../components/seo"
 
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 export const query = graphql`
-    query($slug: String!) {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-        markdownRemark(fields: { slug: { eq: $slug} }) {
-            frontmatter {
-              title
-              date
-              description
-            }
-            html
-            excerpt(pruneLength: 160)
-        }
+  query($slug: String!) {
+    contentfulBlogPost(slug: {
+      eq: $slug
+    }) {
+      title
+      publishedDate(formatString: "MMMM, Do, YYYY")
+      body {
+        json
+      }
     }
-`;
+  }
+
+`
+
 
 const Blog = ({data, pageContext, location }) => {
 
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  //const { previous, next } = pageContext
+    //const { previous, next } = pageContext
+
+    const imgStyles = {
+      maxWidth: "100%",
+      height: "auto",
+      margin: "10px auto",
+      display: "block",
+      borderRadius:"3px",
+      boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 25px"
+    }
+
+    const options = {
+      renderNode: {
+        "embedded-asset-block": (node) => {
+          const alt = node.data.target.fields.title['en-US'];
+          const url = node.data.target.fields.file['en-US'].url;
+          return <img style={imgStyles} alt={alt} src={url} />
+        }
+      }
+    }
 
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout location={location} title={"siteTitle"}>
 
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={data.contentfulBlogPost.title}
+        description="Blog"
       />
 
 <div className="ui__page">
             <div className="page__header">
-              <h1>{post.frontmatter.title}</h1>
-              <p className="page__header-metas">Publicado {post.frontmatter.date}</p>
+              <h1>{data.contentfulBlogPost.title}</h1>
+              <p className="page__header-metas">Publicado {data.contentfulBlogPost.publishedDate}</p>
               <ul className="page__header-breadcrumb">
                   <li><Link to="/">Inicio</Link></li>
                   <li><Link to="/blog">Blog</Link></li>
-                  <li>{post.frontmatter.title}</li>
+                  <li>{data.contentfulBlogPost.title}</li>
               </ul>
               <hr/>
             </div>
             <div className="page__content">
-              <div className="page__content-description" dangerouslySetInnerHTML={{
-                __html: post.html
-            }}>
-                
+              <div className="page__content-description">
+                {
+                  documentToReactComponents(data.contentfulBlogPost.body.json, options)
+                }
               </div>
             </div>
           </div>

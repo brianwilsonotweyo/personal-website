@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@camwiegert/typical": "^0.1.1",
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "@hapi/joi": "^17.1.1",
     "animate.css": "^3.7.2",
     "gatsby": "^2.19.45",
