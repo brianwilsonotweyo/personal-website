@@ -53,7 +53,7 @@ const Blog = ({data, pageContext, location }) => {
       />
 
 <div className="ui__page">
-            <div className="page__header">
+            <div className="page__header text-center">
               <h1>{data.contentfulBlogPost.title}</h1>
               <p className="page__header-metas">Publicado {data.contentfulBlogPost.publishedDate}</p>
               <ul className="page__header-breadcrumb">
@@ -64,10 +64,14 @@ const Blog = ({data, pageContext, location }) => {
               <hr/>
             </div>
             <div className="page__content">
-              <div className="page__content-description">
-                {
-                  documentToReactComponents(data.contentfulBlogPost.body.json, options)
-                }
+              <div className="row justify-content-center">
+                <div className="col-lg-8 col-md-10">
+                  <div className="page__content-description">
+                    {
+                      documentToReactComponents(data.contentfulBlogPost.body.json, options)
+                    }
+                  </div>
+                </div>
               </div>
             </div>
           </div>

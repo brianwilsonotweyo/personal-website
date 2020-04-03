@@ -80,7 +80,8 @@
     }
 
     &-excerpt {
-      font-size: 1rem;
+      color: #737373;
+      font-size: .8rem;
       padding: 5px;
       @media(max-width: 350px) {
         display: none;
@@ -89,7 +90,6 @@
 
     &-metas {
       padding: 5px;
-      color: #777777;
       font-size: .8rem;
     }
 
