@@ -26,10 +26,10 @@ const AboutPage = () => {
             </div>
             <div className="page__content">
                 <div className="row">
-                    <div className="col-sm-3">
+                    <div className="col-lg-3 col-md-4 col-sm-4">
                         <Sidebar/>
                     </div>
-                    <div className="col-sm-9">
+                    <div className="col-lg-9 col-md-8 col-sm-8">
                         <div className="page__content-description">
                             <div className=" wow fadeInUp">
                                 <h4>Hola,</h4>
