@@ -11,24 +11,23 @@ const Blog =() => {
 
     const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allContentfulBlogPost (
+        sort: {
+          fields: publishedDate,
+          order: DESC
+        }
+      ) {
         edges {
           node {
-            frontmatter {
-              title
-              date
-            }
-            html
-            excerpt
-            fields {
-              slug
-            }
+            title
+            slug
+            publishedDate(formatString: "MMMM Do, YYYY")
           }
         }
       }
     }`);
 
-    const { edges } = data.allMarkdownRemark;
+    const posts  = data.allContentfulBlogPost.edges;
 
     return (
         <Layout>
@@ -41,7 +40,7 @@ const Blog =() => {
             <div className="page__content">
               <div className="row">
                 <div className="col-sm-3">
-                    <Sidebar/>
+                  <Sidebar/>
                 </div>
                 <div className="col-sm-9">
                     <div className="page__content-description">
@@ -49,13 +48,13 @@ const Blog =() => {
                     </div>
                     <ol className={styles.posts}>
                       {
-                          edges.map((item, index) => (
-                              <li className={styles.post + " wow fadeInUp"} key={index}>
-                                <Link to={`/blog/${item.node.fields.slug}`}>
-                                  <h2>{item.node.frontmatter.title}</h2>
-                                  <p>{item.node.frontmatter.date}</p>
-                                </Link>
-                              </li>
+                          posts.map((item, index) => (
+                            <li className={styles.post + " wow fadeInUp"} key={index}>
+                              <Link to={`/blog/${item.node.slug}`}>
+                                <h2>{item.node.title}</h2>
+                                <p>{item.node.publishedDate}</p>
+                              </Link>
+                            </li>
                           ))
                       }
                     </ol>
