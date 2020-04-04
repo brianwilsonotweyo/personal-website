@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/shared/layout';
 import SEO from "../components/seo"
 
+import { DiscussionEmbed } from "disqus-react"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 export const query = graphql`
@@ -11,6 +12,7 @@ export const query = graphql`
       eq: $slug
     }) {
       title
+      slug
       publishedDate(formatString: "MMMM, Do, YYYY")
       body {
         json
@@ -20,11 +22,18 @@ export const query = graphql`
 
 `
 
-
 const Blog = ({data, pageContext, location }) => {
+  
+  //const { previous, next } = pageContext
 
-    //const { previous, next } = pageContext
+  const title = data.contentfulBlogPost.title;
+  const slug = data.contentfulBlogPost.slug;
 
+    const disqusConfig = {
+      shortname: process.env.GATSBY_DISQUS_NAME,
+      config: { identifier: slug, title },
+    }
+  
     const imgStyles = {
       maxWidth: "100%",
       height: "auto",
@@ -52,7 +61,7 @@ const Blog = ({data, pageContext, location }) => {
         description="Blog"
       />
 
-<div className="ui__page">
+          <div className="ui__page">
             <div className="page__header text-center">
               <h1>{data.contentfulBlogPost.title}</h1>
               <p className="page__header-metas">Publicado {data.contentfulBlogPost.publishedDate}</p>
@@ -70,6 +79,10 @@ const Blog = ({data, pageContext, location }) => {
                     {
                       documentToReactComponents(data.contentfulBlogPost.body.json, options)
                     }
+                  </div>
+                  <hr className="mt-5"/>
+                  <div className="my-4">
+                      <DiscussionEmbed {...disqusConfig} />
                   </div>
                 </div>
               </div>
