@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 
 import { validateMessage } from '../../utils/validations';
 import Alert from '../../components/alert';
@@ -24,7 +24,7 @@ const ContactForm = () => {
 
     const [loading, setLoading] = useState(false);
     const [payload, setPayload] = React.useState(initialPayload);
-    const [result, setResult] = useState(initialResult);
+    const [result, dispatch] = useReducer(resultReducer, initialResult);
 
     const handleChange = evt => {
         const value = evt.target.value;
@@ -34,31 +34,54 @@ const ContactForm = () => {
         });
     }
 
+    function resultReducer (state, action) {
+        console.log(state, action)
+        switch (action.type) {
+            case "SUCCESS":
+                return action.data = {
+                    show: true,
+                    message: "Tu mensaje fue enviado correctamente. ¡Gracias!",
+                    short: "Muy bien,",
+                    type: "success"
+                }
+
+            case "ERROR":
+                    return action.data = {
+                    show: true,
+                    message: "No se pudo enviar tu mensaje, por favor reintenta.",
+                    short: "Oops: ",
+                    type: "danger"
+                }
+
+            case "VALIDATION":
+                return action.data
+
+            case "NONE":
+                return action.data = initialResult;
+        
+            default:
+                break;
+        }
+
+    }
+
     const send = () => {
 
         setLoading(true)
-        setResult(initialResult)
 
         sendMessage(payload).then(() => {
             setLoading(false);
-
-            setResult({
-                show: true,
-                message: "Tu mensaje fue enviado correctamente. ¡Gracias!",
-                short: "Muy bien,",
-                type: "success"
+            dispatch({
+                type: "SUCCESS"
             });
-
+            
             setPayload(initialPayload);
 
         }).catch(err => {
             setLoading(false);
 
-            setResult({
-                show: true,
-                message: "No se pudo enviar tu mensaje, por favor reintenta.",
-                short: "Oops: ",
-                type: "danger"
+            dispatch({
+                type: "ERROR"
             });
 
             console.log('Error', err);
@@ -69,17 +92,18 @@ const ContactForm = () => {
 
         e.preventDefault();
 
-        setResult(initialPayload);
-
         const result = validateMessage(payload);
 
         if(result.error) {
 
-            setResult({
-                show: true,
-                message: result.error.details[0].message,
-                short: "Hey,",
-                type: "warning"
+            dispatch({
+                type: "VALIDATION",
+                data: {
+                    show: true,
+                    message: result.error.details[0].message,
+                    short: "Hey,",
+                    type: "warning"
+                }
             });
 
             return false
@@ -89,6 +113,8 @@ const ContactForm = () => {
         
         return result;
     }
+
+
 
     return (
         <div className={styles.c__area + " wow fadeInUp"}>

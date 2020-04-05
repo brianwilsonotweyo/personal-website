@@ -1,7 +1,7 @@
 const apiURL = 'https://pixelagil.herokuapp.com/api';
 
 export const sendMessage = async (payload) =>  {
-    payload.notify = true;
+    //payload.notify = true;
     try {
         const options = {
             method: 'POST',
