@@ -110,7 +110,7 @@
     }
 
     .nav__item {
-      color: #999999;
+      color: #666;
       font-size: 0.9rem;
       text-transform: uppercase;
       margin-right: 1.3rem;
@@ -127,11 +127,11 @@
       }
 
       &:hover {
-        color: #666;
+        color: #353535;
       }
 
       &.active {
-        color: #333333;
+        color:#000000;
       }
     }
   }

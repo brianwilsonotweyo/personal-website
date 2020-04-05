@@ -26,7 +26,7 @@ const About =  () => {
                     </div>
                     <div className="col-sm-7">
                         <div className="ui__section-content">
-                            <img src="/img/carbon-v1.png" className="img-fluid" alt="I love React"/>
+                            <img src="/img/carbon-react.jpg" className="img-fluid" alt="I love React"/>
                         </div>
                     </div>
                 </div>

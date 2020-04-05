@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './header';
 import Footer from './footer';
 
-import 'animate.css/animate.css';
 import 'simple-line-icons/css/simple-line-icons.css';
 
 // Global Styles

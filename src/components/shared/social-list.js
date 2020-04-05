@@ -19,22 +19,22 @@ const SocialList = () => {
 
     return (
         <ul className={styles.socialList}>
-        <li>
-            <a href={data.site.siteMetadata.twitter} target="_blank" rel="noopener noreferrer">
-                <img src="/img/social/twitter-dark.png" alt="Twitter"/>
-            </a>
-        </li>
-        <li>
-            <a href={data.site.siteMetadata.linkedin} target="_blank" rel="noopener noreferrer">
-                <img src="/img/social/linkedin-dark.png" alt="Linedin"/>
-            </a>
-        </li>
-        <li>
-            <a href={data.site.siteMetadata.github} target="_blank" rel="noopener noreferrer">
-                <img src="/img/social/github-dark.png" alt="Github"/>
-            </a>
-        </li>
-    </ul>
+            <li>
+                <a href={data.site.siteMetadata.twitter} target="_blank" rel="noopener noreferrer">
+                    <img src="/img/social/twitter-dark.png" alt="Twitter"/>
+                </a>
+            </li>
+            <li>
+                <a href={data.site.siteMetadata.linkedin} target="_blank" rel="noopener noreferrer">
+                    <img src="/img/social/linkedin-dark.png" alt="Linedin"/>
+                </a>
+            </li>
+            <li>
+                <a href={data.site.siteMetadata.github} target="_blank" rel="noopener noreferrer">
+                    <img src="/img/social/github-dark.png" alt="Github"/>
+                </a>
+            </li>
+        </ul>
     )
 
 }

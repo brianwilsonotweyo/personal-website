@@ -33,7 +33,7 @@ const Features = () => {
                                     </div>
 
                                     <div className={styles.media   + " wow fadeInUp"}>
-                                        <img src="/img/web-mockup.png" className="img-fluid" alt="Site Mockup"/>
+                                        <img src="/img/web-mockup.jpg" className="img-fluid" alt="Site Mockup"/>
                                     </div>
 
                                     <div className="wow fadeInRight">
