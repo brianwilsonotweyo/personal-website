@@ -1,19 +1,18 @@
 .navbar {
-    width: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+  padding: 10px 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  @media (max-width: 768px) {
     position: fixed;
-    top: 0;
     z-index: 2;
-    background-color: #fff;
-    padding: 10px 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    @media(max-width: 768px) {
-      position: fixed;
-      z-index: 2;
-      top: 0;
-      width: 100%;
-    }
+    top: 0;
+    width: 100%;
+  }
 }
-
 
 .nav {
   &__toggle {
@@ -30,7 +29,7 @@
       width: 100%;
       stroke-width: 2px;
     }
-    
+
     @media (max-width: 768px) {
       display: flex;
     }
@@ -43,7 +42,7 @@
     }
   }
   &__container {
-    max-width: 1270px;
+    max-width: 1180px;
     margin: 0 auto;
     display: flex;
     width: 100%;
@@ -52,9 +51,8 @@
   }
 
   &__branding {
-    width: 220px;
+    width: 100px;
     padding: 5px;
-    margin-right: 50px;
     > a {
       display: block;
       .logo {
@@ -65,7 +63,7 @@
       }
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       width: 100px;
     }
   }
@@ -73,8 +71,8 @@
   &__body {
     width: 100%;
 
-    @media(max-width: 768px) {
-      transition: all ease-in-out .1s;
+    @media (max-width: 768px) {
+      transition: all ease-in-out 0.1s;
       overflow: hidden;
       width: 0;
       position: fixed;
@@ -83,44 +81,41 @@
       top: 50px;
       background: #eee;
       z-index: 2;
-      
     }
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     &__body__isToggled {
       width: 70%;
     }
   }
 
-
   &__menu {
     display: block;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     list-style: none;
     margin: 0;
+    padding: 0;
 
-    > li {
-        margin-right: 35px;
-        display: inline-block;
-        
-        @media(max-width: 768px) {
-          display: block;
-          margin-right: 0;
-        }
+    @media (max-width: 768px) {
+      display: block;
     }
 
     .nav__item {
       color: #666;
+      text-align: center;
+      white-space: nowrap;
       font-size: 0.9rem;
       text-transform: uppercase;
-      margin-right: 1.3rem;
       text-decoration: none;
+      padding: 4px 15px;
 
       &-featured {
         color: var(--pink);
       }
-      
-      @media(max-width: 768px) {
+
+      @media (max-width: 768px) {
         display: block;
         padding: 1rem;
         font-size: 1rem;
@@ -131,7 +126,7 @@
       }
 
       &.active {
-        color:#000000;
+        color: #000000;
       }
     }
   }
