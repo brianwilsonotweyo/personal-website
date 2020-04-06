@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from './Image';
+
 import styles from './portfolio.module.scss';
 
 const PortfolioItem = ({photo, thumb, name, description, category, url, published}) => {
@@ -21,7 +23,7 @@ const PortfolioItem = ({photo, thumb, name, description, category, url, publishe
                     
                 </div>
             </div>
-            <img src={thumb} alt={name} className={styles.p__itemThumb}/>
+            <Image thumb={thumb} name={name}/>
             <div className={styles.p__itemCaption}>
                 <h4 className={styles.p__itemTitle}>{name}</h4>
                 <p className={styles.p__itemCategory}>{category}</p>
