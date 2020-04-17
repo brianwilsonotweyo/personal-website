@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/shared/layout';
 import SEO from '../components/seo';
 import Sidebar from '../components/shared/sidebar';
+import Repos from '../components/home/repos';
 import styles from './about.module.scss';
 
 const SkillItem = ({ name, logo }) => {
@@ -63,16 +64,20 @@ const AboutPage = () => {
 
                             <div className="mb-5">
                             <h4>También conozco</h4>
-                            <p>Consumo de API REST, Git Flow, Bootstrap, Photoshop. <span role="img" aria-label="Smile">😄</span></p>
+                            <p>Consumo de API REST, Git Flow, Agile, Scrum,  Bootstrap, Photoshop. <span role="img" aria-label="Smile">😄</span></p>
                             </div>
 
                             <h3>¿Quieres conocer algunos de mis trabajos?</h3>
                             <br/>
                             <Link to="/mywork" className="btn btn-primary">Ir al Portafolio</Link>
+                          
+                            <div className="mt-4">
+                                <hr/>
+                                <Repos/>
+                            </div>
 
                         </div>
                     </div>
-
                 </div>
             </div>
           </div>

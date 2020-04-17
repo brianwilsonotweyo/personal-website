@@ -1,4 +1,5 @@
 import React from 'react'
+import Repos from './repos'
 
 const About =  () => {
 
@@ -6,6 +7,7 @@ const About =  () => {
         maxWidth: "70%",
         margin: "0 auto"
     }
+
     return (
         <section className="ui__section isDark">
             <div className="container">
@@ -26,7 +28,16 @@ const About =  () => {
                     </div>
                     <div className="col-sm-7">
                         <div className="ui__section-content">
-                            <img src="/img/carbon-react.jpg" className="img-fluid" alt="I love React"/>
+                            <img src="/img/carbon.png" className="img-fluid" alt="I love React"/>
+                        </div>
+                    </div>
+                </div>
+                <div className="row mt-5">
+                    <div className="col-sm-12">
+                        <div className="ui__section-content">
+                            
+                            <Repos isDark={true}/>
+                            
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 80vh;
+        min-height: 70vh;
+        background: #000;
 
         &:after {
             content: '';
@@ -15,8 +16,11 @@
             bottom: 0;
             top: 0;
             z-index: 0;
-            background-color: #ffffff;
-            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+            background-color: #000;
+            background-image: url("/img/santiago.jpg");
+            background-size: cover;
+            background-position: center;
+            opacity: .4;
         }
     }
 
@@ -30,10 +34,13 @@
     }
 
     &__content {
-        text-align: center;
+        color: #fff;
+        text-align: left;
         padding: 15px;
         position: relative;
         z-index: 1;
+        width: 100%;
+        max-width: 1270px;
 
         .logo {
             max-width: 80px;
@@ -64,6 +71,7 @@
 
         .subtitle {
             font-size: 1.1rem;
+            font-weight: 200;
             margin: 0 0 5px;
         }
 
@@ -72,7 +80,15 @@
             font-weight: normal;
             padding-left: 35px;
             padding-right: 35px;
+            margin-right: 10px;
             box-shadow: 0 4px 14px 0 rgba(0,118,255,0.39);
+        }
+        .mywork {
+            font-size: 1.2rem;
+            font-weight: normal;
+            padding-left: 35px;
+            padding-right: 35px;
+            box-shadow: 0 4px 14px 0 rgba(#111,0.39);
         }
     }
 }

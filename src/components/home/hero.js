@@ -9,19 +9,20 @@ const Hero = () => {
 
     useEffect(() => {
         const el = document.getElementById('target');
-        type(el, 'Desarrollo Frontend', 3000, 'Diseño Web', 3000, 'Diseño de UI/UX', 3000, loop)
+        type(el, 'Desarrollo Frontend', 2000, 'Diseño Web', 2000, 'Diseño de UI/UX', 2000, loop)
     }, []);
     
     return (
         <div className={styles.hero__wrapper}>
-            <div className={styles.hero__content  + " wow fadeInUp"}>
-                <img src="/img/logo-color.png" className={styles.logo} alt=""/>
-
-                <h4 className={styles.subtitle}>Soy Alejandro y tabajo con</h4>
-                <h1 className={styles.title} id="target">Desarrollo Frontend</h1>
-
-                <Link to="/contact" className={"btn btn-secondary " + styles.cta}>Contáctame</Link>
-
+            <div className="container">
+                <div className={styles.hero__content  + " wow fadeInUp"}>
+                    <h4 className={styles.subtitle}>Actualmente trabajo con</h4>
+                    <h1 className={styles.title} id="target">Desarrollo Frontend</h1>
+                    <div>
+                        <Link to="/contact" className={"btn btn-secondary " + styles.cta}>Contáctame</Link>
+                        <Link to="/mywork" className={"btn btn-primary " + styles.mywork}>Proyectos</Link>
+                    </div>
+                </div>
             </div>
         </div>
     )

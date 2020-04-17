@@ -1,0 +1,94 @@
+.ui {
+    &__repos {
+        &-grid {
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+        }
+
+        &-item {
+            color: #111;
+            text-align: left;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: #111;
+                text-decoration: none;
+                background: #f9f9f9;
+                h4 {
+                    color: var(--pink);
+                }
+            }
+
+            &:nth-child(even) {
+                background: #f9f9f9;
+            }
+
+            &:nth-child(odd) {
+                background: #fff;
+            }
+
+            &-isDark {
+                color: #eee;
+                border: 1px solid #222;
+                
+                &:hover,
+                &:focus {
+                    color: #fff;
+                    text-decoration: none;
+                    background: #222;
+                    h4 {
+                        color: var(--pink);
+                    }
+                }
+
+                &:nth-child(even) {
+                    background: #000;
+                }
+    
+                &:nth-child(odd) {
+                    background: #111;
+                }
+            }
+            
+           
+
+            h4 {
+                margin: 0 0 5px;
+            }
+
+            p {
+                color: #999;
+                margin: 0 0 5px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+        }
+
+        &-stats {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            > div {
+                padding: 5px;
+                text-align: left;
+                white-space: nowrap;
+
+                svg {
+                    stroke: #fff;
+                    //stroke-width: 1px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
