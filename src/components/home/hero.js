@@ -20,7 +20,7 @@ const Hero = () => {
                     <h1 className={styles.title} id="target">Desarrollo Frontend</h1>
                     <div>
                         <Link to="/contact" className={"btn btn-secondary " + styles.cta}>Contáctame</Link>
-                        <Link to="/mywork" className={"btn btn-primary " + styles.mywork}>Proyectos</Link>
+                        <Link to="/mywork" className={"btn btn-link " + styles.mywork}>Mis trabajos</Link>
                     </div>
                 </div>
             </div>

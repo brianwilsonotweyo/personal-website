@@ -5,8 +5,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 70vh;
-        background: #000;
+        min-height: 80vh;
+        background: #fff;
 
         &:after {
             content: '';
@@ -16,8 +16,9 @@
             bottom: 0;
             top: 0;
             z-index: 0;
-            background-color: #000;
-            background-image: url("/img/santiago.jpg");
+            background-color: #fff;
+            //background-image: url("/img/santiago.jpg");
+            background-image: url("/img/3681690.jpg");
             background-size: cover;
             background-position: center;
             opacity: .4;
@@ -34,8 +35,8 @@
     }
 
     &__content {
-        color: #fff;
-        text-align: left;
+        color: #111;
+        text-align: center;
         padding: 15px;
         position: relative;
         z-index: 1;
@@ -81,6 +82,7 @@
             padding-left: 35px;
             padding-right: 35px;
             margin-right: 10px;
+            margin-bottom: 10px;
             box-shadow: 0 4px 14px 0 rgba(0,118,255,0.39);
         }
         .mywork {
@@ -88,7 +90,9 @@
             font-weight: normal;
             padding-left: 35px;
             padding-right: 35px;
-            box-shadow: 0 4px 14px 0 rgba(#111,0.39);
+            margin-bottom: 10px;
+            text-decoration: underline!important;
+            //box-shadow: 0 4px 14px 0 rgba(#111,0.39);
         }
     }
 }

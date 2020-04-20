@@ -92,8 +92,6 @@
 
   &__menu {
     display: block;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     list-style: none;
     margin: 0;
     padding: 0;
@@ -110,6 +108,7 @@
       text-transform: uppercase;
       text-decoration: none;
       padding: 4px 15px;
+      display: inline-block;
 
       &-featured {
         color: var(--pink);

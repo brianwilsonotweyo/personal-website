@@ -14,9 +14,9 @@ const About =  () => {
                 <div className="row">
                     <div className="col-sm-5">
                         <div className="ui__section-content">
-                            <h2 className="ui__section-title about wow fadeInUp">Acerca de mí</h2>
+                            <h2 className="ui__section-title about wow fadeInUp">Hola,</h2>
 
-                            <p className="wow fadeInUp">Me llamo Alejandro Vivas, y he trabajado por mas de 6 años con Desarrollo Frontend y Diseño Web. Tengo experiencia con diferentes tecnologías tales como, <strong>HTML5, CSS3/SASS, Javascript</strong>.</p>
+                            <p className="wow fadeInUp">Me llamo Alejandro Vivas, y he trabajado por más de 6 años con Desarrollo Frontend y Diseño Web. Tengo experiencia con diferentes tecnologías tales como, <strong>HTML5, CSS3/SASS, Javascript</strong>.</p>
                             
                             <img src="/img/tech-logos.png" style={techStyles} className="img-fluid d-block mt-4 wow fadeInUp" alt="I love JavaScript"/>
                             <code className="font-weight-light my-3 d-block text-center wow fadeInUp">Demás está decir que mi lenguaje favorito es Javascript ❤</code>
