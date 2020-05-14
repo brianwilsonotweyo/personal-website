@@ -23,7 +23,7 @@ const ReposGrid = ({isDark}) => {
         
         setLoading(true)
         getRepos().then(res => {
-            const ids = [178255527, 187285302, 231851225, 232661146, 252233823, 181121746]
+            const ids = [178255527, 187285302, 231851225, 232661146, 252233823, 181121746, 263526757, 261034049]
             const filtered = res.filter(item => ids.includes(item.id));
             setProjects(filtered);
             setLoading(false)
